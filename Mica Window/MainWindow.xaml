@@ -1,0 +1,128 @@
+﻿<local:MicaBrowserWindowNoTab x:Class="MicaBrowser.MicaBrowserWindowNoTab"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:local="clr-namespace:MicaBrowser"
+        mc:Ignorable="d"
+        Background="Transparent"
+        Title="Mica Discord"
+        d:DesignHeight="450" d:DesignWidth="800"
+        d:Background="DimGray"
+        xmlns:cg="clr-namespace:CustomGrid"
+        xmlns:shell="using:System.Windows.Shell"
+        xmlns:ui="http://schemas.modernwpf.com/2019">
+    <local:MicaWindow.Resources>
+        <FontFamily x:Key="IconFont">Segoe Fluent Icons</FontFamily>
+        <SolidColorBrush x:Key="Color" Color="White"/>
+        <DrawingImage x:Key="ArrowLeft">
+            <DrawingImage.Drawing>
+                <DrawingGroup ClipGeometry="M0,0 V48 H48 V0 H0 Z">
+                    <GeometryDrawing Brush="{DynamicResource Color}" Geometry="F1 M48,48z M0,0z M44,24C44,24.6904,43.4404,25.25,42.75,25.25L10.3041,25.25 23.1264,37.8586C23.6187,38.3426 23.6253,39.134 23.1413,39.6263 22.6572,40.1185 21.8658,40.1252 21.3736,39.6411L6.38563,24.903C6.37656,24.8943 6.36759,24.8854 6.35872,24.8764 6.14696,24.6611 6.02911,24.3884 6.00476,24.1094 5.99775,24.029 5.99848,23.9481 6.00696,23.8679 6.03557,23.5967 6.15267,23.333 6.35872,23.1234 6.37242,23.1095 6.38611,23.096 6.39982,23.0829L21.3736,8.35872C21.8658,7.87468 22.6572,7.88134 23.1413,8.37358 23.6253,8.86582 23.6187,9.65724 23.1264,10.1413L10.304,22.75 42.75,22.75C43.4404,22.75,44,23.3096,44,24z" />
+                </DrawingGroup>
+            </DrawingImage.Drawing>
+        </DrawingImage>
+        <DrawingImage x:Key="ArrowRight">
+            <DrawingImage.Drawing>
+                <DrawingGroup ClipGeometry="M0,0 V48 H48 V0 H0 Z">
+                    <GeometryDrawing Brush="{DynamicResource Color}" Geometry="F1 M48,48z M0,0z M4,23.9999C4,23.3096,4.55964,22.7499,5.25,22.7499L37.6959,22.7499 24.8736,10.1413C24.3813,9.65725 24.3747,8.86582 24.8587,8.37358 25.3428,7.88134 26.1342,7.87468 26.6264,8.35872L41.6144,23.0969C41.6234,23.1056 41.6324,23.1145 41.6413,23.1235 41.853,23.3389 41.9709,23.6115 41.9952,23.8906 42.0022,23.9709 42.0015,24.0518 41.993,24.132 41.9644,24.4032 41.8473,24.667 41.6413,24.8765 41.6276,24.8904 41.6139,24.9039 41.6002,24.917L26.6264,39.6413C26.1342,40.1253 25.3428,40.1187 24.8587,39.6264 24.3747,39.1342 24.3813,38.3427 24.8736,37.8587L37.696,25.2499 5.25,25.2499C4.55964,25.2499,4,24.6903,4,23.9999z" />
+                </DrawingGroup>
+            </DrawingImage.Drawing>
+        </DrawingImage>
+        <DrawingImage x:Key="Reload">
+            <DrawingImage.Drawing>
+                <DrawingGroup ClipGeometry="M0,0 V24 H24 V0 H0 Z">
+                    <GeometryDrawing Brush="{DynamicResource Color}" Geometry="F1 M24,24z M0,0z M16.2506,5.18011C15.9994,5.50947 16.0627,5.9801 16.3921,6.23128 18.1804,7.59515 19.25,9.70821 19.25,12 19.25,15.736 16.4242,18.812 12.7933,19.2071L13.4697,18.5303C13.7626,18.2374 13.7626,17.7626 13.4697,17.4697 13.2034,17.2034 12.7867,17.1792 12.4931,17.3971L12.409,17.4697 10.409,19.4697C10.1427,19.7359,10.1185,20.1526,10.3364,20.4462L10.409,20.5303 12.409,22.5303C12.7019,22.8232 13.1768,22.8232 13.4697,22.5303 13.7359,22.2641 13.7601,21.8474 13.5423,21.5538L13.4697,21.4697 12.7194,20.7208C17.2154,20.355 20.75,16.5903 20.75,12 20.75,9.23526 19.4582,6.68321 17.3017,5.03856 16.9724,4.78738 16.5017,4.85075 16.2506,5.18011z M10.5303,1.46967C10.2374,1.76256,10.2374,2.23744,10.5303,2.53033L11.2796,3.27923C6.78409,3.6456 3.25,7.41008 3.25,12 3.25,14.6445 4.43126,17.0974 6.43081,18.7491 6.75016,19.0129 7.22289,18.9679 7.48669,18.6485 7.75048,18.3292 7.70545,17.8564 7.3861,17.5926 5.72793,16.2229 4.75,14.1922 4.75,12 4.75,8.26436 7.57532,5.18861 11.2057,4.79301L10.5303,5.46967C10.2374,5.76256 10.2374,6.23744 10.5303,6.53033 10.8232,6.82322 11.2981,6.82322 11.591,6.53033L13.591,4.53033C13.8839,4.23744,13.8839,3.76256,13.591,3.46967L11.591,1.46967C11.2981,1.17678,10.8232,1.17678,10.5303,1.46967z" />
+                </DrawingGroup>
+            </DrawingImage.Drawing>
+        </DrawingImage>
+        <DrawingImage x:Key="Gear">
+            <DrawingImage.Drawing>
+                <DrawingGroup ClipGeometry="M0,0 V48 H48 V0 H0 Z">
+                    <GeometryDrawing Brush="{DynamicResource Color}" Geometry="F1 M48,48z M0,0z M19.4943,43.468C20.9727,43.8208 22.4874,43.999 24.0073,43.999 25.524,43.9974 27.0353,43.8182 28.5103,43.465 28.898,43.3716 29.2476,43.161 29.5114,42.8618 29.7751,42.5626 29.9402,42.1894 29.9843,41.793L30.3223,38.722C30.3794,38.1728 30.6307,37.662 31.0309,37.2816 31.4311,36.9012 31.9539,36.6762 32.5053,36.647 32.8719,36.6311 33.2372,36.6995 33.5732,36.847L36.3803,38.078C36.6243,38.1877 36.8886,38.2452 37.1562,38.2469 37.4238,38.2487 37.6888,38.1945 37.9343,38.088 38.1807,37.9827 38.4022,37.8266 38.5843,37.63 40.6483,35.4053 42.1891,32.7475 43.0943,29.851 43.2128,29.4667 43.2091,29.0552 43.0837,28.6731 42.9583,28.291 42.7174,27.9573 42.3943,27.718L39.9003,25.878C39.6032,25.6622 39.3614,25.3793 39.1947,25.0522 39.028,24.7251 38.9411,24.3631 38.9411,23.996 38.9411,23.6289 39.028,23.2669 39.1947,22.9398 39.3614,22.6127 39.6032,22.3297 39.9003,22.114L42.3863,20.278C42.7104,20.0383 42.9519,19.7038 43.0774,19.3207 43.2028,18.9376 43.2059,18.5249 43.0863,18.14 42.1808,15.243 40.6381,12.5857 38.5713,10.363 38.2974,10.0703 37.9395,9.86982 37.5469,9.78922 37.1542,9.70861 36.7463,9.75187 36.3793,9.91299L33.5732,11.149C33.2821,11.2802 32.9666,11.3483 32.6473,11.349 32.0711,11.3481 31.5155,11.1345 31.0872,10.7491 30.6588,10.3638 30.3879,9.83385 30.3263,9.26099L29.9863,6.20099C29.9428,5.79937 29.7748,5.42138 29.5058,5.11996 29.2368,4.81855 28.8804,4.60878 28.4863,4.51999 27.019,4.19242 25.5216,4.01847 24.0183,4.00098 22.5043,4.01846 20.9963,4.19274 19.5183,4.521 19.1246,4.60928 18.7684,4.81836 18.4995,5.11905 18.2305,5.41974 18.0623,5.79699 18.0183,6.198L17.6773,9.25998C17.6134,9.83345 17.3403,10.3632 16.9103,10.748 16.471,11.1211 15.9174,11.3328 15.3413,11.348 15.0235,11.3478 14.7092,11.2817 14.4183,11.154L11.6183,9.918C11.25,9.75542 10.8403,9.71157 10.4461,9.79257 10.0518,9.87358 9.69255,10.0754 9.41827,10.37 7.35399,12.5931 5.81275,15.2495 4.90726,18.145 4.78769,18.5298 4.79083,18.9423 4.91627,19.3252 5.0417,19.7081 5.2832,20.0425 5.60726,20.282L8.09626,22.118C8.39089,22.3355 8.63046,22.6191 8.79578,22.9459 8.9611,23.2727 9.04758,23.6337 9.04827,24 9.0486,24.3669 8.9626,24.7286 8.79722,25.0561 8.63183,25.3836 8.3917,25.6675 8.09626,25.885L5.60627,27.724C5.2826,27.9633 5.04136,28.2974 4.91595,28.6799 4.79053,29.0624 4.78714,29.4745 4.90626,29.859 5.80978,32.7571 7.35083,35.4162 9.41627,37.641 9.59569,37.8352 9.81367,37.9898 10.0563,38.095 10.301,38.2026 10.5654,38.2581 10.8328,38.2581 11.1001,38.2581 11.3645,38.2026 11.6093,38.095L14.4283,36.858C14.7191,36.7298,15.0335,36.6637,15.3513,36.664L15.3593,36.664C15.9331,36.6647 16.4866,36.8765 16.9144,37.2589 17.3422,37.6414 17.6145,38.1678 17.6793,38.738L18.0173,41.795C18.0614,42.1919 18.227,42.5656 18.4913,42.865 18.7556,43.1644 19.1059,43.375 19.4943,43.468z M24,30.25C20.5482,30.25 17.75,27.4518 17.75,24 17.75,20.5482 20.5482,17.75 24,17.75 27.4518,17.75 30.25,20.5482 30.25,24 30.25,27.4518 27.4518,30.25 24,30.25z" />
+                </DrawingGroup>
+            </DrawingImage.Drawing>
+        </DrawingImage>
+        <Style x:Key="{x:Type Window}"
+       TargetType="{x:Type Window}">
+            <Setter Property="SnapsToDevicePixels"
+          Value="true" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Window}">
+                        <Grid>
+                            <Grid.Background>
+                                <SolidColorBrush Color="{DynamicResource WindowColor}"/>
+                            </Grid.Background>
+                            <AdornerDecorator>
+                                <ContentPresenter />
+                            </AdornerDecorator>
+                            <ResizeGrip x:Name="WindowResizeGrip"
+                      HorizontalAlignment="Right"
+                      VerticalAlignment="Bottom"
+                      Visibility="Collapsed"
+                      IsTabStop="false" />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="ResizeMode"
+                   Value="CanResizeWithGrip">
+                                <Setter TargetName="WindowResizeGrip"
+                    Property="Visibility"
+                    Value="Visible" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </local:MicaWindow.Resources>
+    <cg:Overlay>
+        <cg:RowGrid x:Name="WebView2AddHere">
+            <Border cg:CustomGrid.GridType="Auto">
+                <cg:Overlay x:Name="TitleBar" VerticalAlignment="Top" Height="30">
+                    <Border Background="{DynamicResource Color}" Opacity="0"></Border>
+                    <cg:ColumnGrid>
+                        <!--Height here is temperary height for design time-->
+                        <TextBlock Margin="10,10,10,10" x:Name="TitleText" VerticalAlignment="Center" Foreground="{DynamicResource Color}" cg:CustomGrid.GridType="Auto">Mica Discord</TextBlock>
+                        <Button x:Name="Back" Template="{StaticResource NoDisabledBackground}" VerticalAlignment="Center" cg:CustomGrid.GridType="Auto" Foreground="{DynamicResource Color}" Background="Transparent" Width="40" Height="40" FontFamily="{DynamicResource IconFont}">
+                            <!--<Image Source="{StaticResource ArrowLeft}" Width="20" Height="30"/>-->
+                            &#xE112;
+                        </Button>
+                        <Button x:Name="Forward" Template="{StaticResource NoDisabledBackground}" VerticalAlignment="Center" cg:CustomGrid.GridType="Auto" Foreground="{DynamicResource Color}" Background="Transparent" Width="40" Height="40" FontFamily="{DynamicResource IconFont}">
+                            <!--<Image Source="{StaticResource ArrowRight}" Width="20" Height="30"/>-->
+                            &#xE111;
+                        </Button>
+                        <Button x:Name="Reload" Template="{StaticResource NoDisabledBackground}" VerticalAlignment="Center" cg:CustomGrid.GridType="Auto" Foreground="{DynamicResource Color}" Background="Transparent" Width="40" Height="40" Click="RefreshPage" FontFamily="{DynamicResource IconFont}">
+                            <!--<Image Source="{StaticResource Reload}" Width="20" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+                                <Image.RenderTransform>
+                                    <ScaleTransform ScaleX="-1"/>
+                                </Image.RenderTransform>
+                            </Image>-->
+                            &#xE149;
+                        </Button>
+                        <Button x:Name="Setting" Template="{StaticResource NoDisabledBackground}" VerticalAlignment="Center" cg:CustomGrid.GridType="Auto" Foreground="{DynamicResource Color}" Background="Transparent" Click="OpenSettings" Width="40" Height="40" FontFamily="{DynamicResource IconFont}">
+                            <!--<Image Source="{StaticResource Gear}" Width="20" Height="30"/>-->
+                            &#xE115;
+                        </Button>
+                        <Grid x:Name="TitleBarDragable" Height="50" VerticalAlignment="Center">
+                            <TextBlock x:Name="WebsiteTitle" Margin="10,10,10,10" VerticalAlignment="Center" Foreground="{DynamicResource Color}" cg:CustomGrid.GridType="Auto"></TextBlock>
+                        </Grid>
+                        <StackPanel x:Name="TitleBarCaptionButtons" Orientation="Horizontal" cg:CustomGrid.GridType="Auto" Visibility="Collapsed">
+                            <Button Content="-" Width="40" Height="40" Template="{StaticResource NoDisabledBackground}" Foreground="{DynamicResource Color}" VerticalAlignment="Center" Click="Minimize"/>
+                            <Button Content="❏" Width="40" Height="40" Template="{StaticResource NoDisabledBackground}" Foreground="{DynamicResource Color}" VerticalAlignment="Center" Click="Maximize"/>
+                            <Button Content="X" Width="40" Height="40" Template="{StaticResource NoDisabledBackground}" Foreground="{DynamicResource Color}" VerticalAlignment="Center" Click="Close"/>
+                        </StackPanel>
+                    </cg:ColumnGrid>
+                </cg:Overlay>
+            </Border>
+        </cg:RowGrid>
+        <cg:Overlay Visibility="Hidden" x:Name="DialogPlace">
+            <Border Opacity="0.5" Background="Black"></Border>
+            <cg:CenterBoth>
+                <local:SettingsDialog x:Name="SettingsDialog">
+
+                </local:SettingsDialog>
+            </cg:CenterBoth>
+        </cg:Overlay>
+    </cg:Overlay>
+</local:MicaBrowserWindowNoTab>

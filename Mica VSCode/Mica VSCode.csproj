@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFrameworks>net6.0-windows10.0.17763.0;net6.0-windows7.0</TargetFrameworks>
+		<SupportedOSPlatformVersions>10.0.17763.0;7.0</SupportedOSPlatformVersions>
+		<RuntimeIdentifiers>win-x86;win-x64;win-arm64</RuntimeIdentifiers>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+		<UseWindowsForms>True</UseWindowsForms>
+		<WindowsPackageType Condition=" '$(TargetFramework)' == 'net6.0-windows10.0.17763.0' ">None</WindowsPackageType>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="PInvoke.User32" Version="0.7.104" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="D:\Programming\VS\HwndHostTest\Mica Window\Mica Window.csproj" />
+	</ItemGroup>
+
+</Project>
