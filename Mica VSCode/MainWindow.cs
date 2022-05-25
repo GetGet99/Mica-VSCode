@@ -18,7 +18,10 @@ using PInvoke;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.Threading;
-namespace HwndHostTest
+using Path = System.IO.Path;
+using System.IO;
+
+namespace MicaVSCode
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -62,14 +65,19 @@ namespace HwndHostTest
             //};
             Loaded += delegate
             {
-                var proc = Process.Start(@"C:\Users\Get\AppData\Local\Programs\Microsoft VS Code\Code.exe");
-                Thread.Sleep(1000);
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = "code",
+                    UseShellExecute = true,
+                });
+                Thread.Sleep(2000);
+
                 var windows = GetWindowAPI.GetWindows();
                 var window = windows.First(x => x.WinTitle?.Contains("Visual Studio Code") ?? false);
                 var handle = (IntPtr)window.MainWindowHandle;
-                
-                MainContent = new HwndHostEx(handle);
-                
+                var hwndhost = new HwndHostEx(handle);
+                MainContent = hwndhost;
+                hwndhost.Focus();
             };
 
         }

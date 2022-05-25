@@ -16,7 +16,23 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="D:\Programming\VS\HwndHostTest\Mica Window\Mica Window.csproj" />
+	  <ProjectReference Include="..\Mica Window\Mica Window.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Settings.Designer.cs">
+	    <DesignTimeSharedInput>True</DesignTimeSharedInput>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Settings.settings</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="Settings.settings">
+	    <Generator>SettingsSingleFileGenerator</Generator>
+	    <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+	    <CustomToolNamespace>Properties</CustomToolNamespace>
+	  </None>
 	</ItemGroup>
 
 </Project>
