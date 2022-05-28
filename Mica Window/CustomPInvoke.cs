@@ -5,7 +5,7 @@ using System.Windows.Media;
 namespace CustomPInvoke;
 
 
-class DwmApi
+public class DwmApi
 {
     [Flags]
     enum DWM_SYSTEMBACKDROP_TYPE

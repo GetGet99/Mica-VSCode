@@ -39,6 +39,7 @@ partial class MicaWindow : IMicaWindowCustomization
 #endif
     public IMicaWindowCustomization Customization => this;
     public int TitleBarHeight { get; set; } = 32;
+    protected Border TitleBarContainer => TitleBarElementContainer;
     public UIElement? TitleBarElement
     {
         get => TitleBarElementContainer?.Child;

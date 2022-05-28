@@ -56,6 +56,7 @@ namespace MicaVSCode
 #if WINDOWS10_0_17763_0_OR_GREATER
             Settings.BackdropType = MicaWindow.BackdropType.Mica;
 #endif
+            TitleBarContainer.Visibility = Visibility.Visible;
             //var win = new Form
             //{
             //    Controls =
@@ -75,7 +76,10 @@ namespace MicaVSCode
                 var windows = GetWindowAPI.GetWindows();
                 var window = windows.First(x => x.WinTitle?.Contains("Visual Studio Code") ?? false);
                 var handle = (IntPtr)window.MainWindowHandle;
-                var hwndhost = new HwndHostEx(handle);
+                var hwndhost = new HwndHostEx(handle)
+                {
+                    Margin = new Thickness(0, -32, 0, 0)
+                };
                 MainContent = hwndhost;
                 hwndhost.Focus();
             };
@@ -105,6 +109,7 @@ namespace MicaVSCode
             LWA_ALPHA = 0x00000002,
             LWA_COLORKEY = 0x00000001,
         }
+        
         public HwndHostEx(IntPtr handle)
         {
             this.ChildHandle = handle;
