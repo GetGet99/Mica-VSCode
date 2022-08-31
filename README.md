@@ -1,8 +1,8 @@
-# Mica VSCode (ALPHA)
+# Tabbed VSCode (PRE-ALPHA)
 
-A project that puts VSCode on Mica.
+A project that puts VSCode on Tabbed.
 
-Disclaimer: ALPHA! This is still unstable!
+Disclaimer: PRE-ALPHA! This is still unstable (I'll start working on it soon)!
 
 ## Requirements
 1. Visual Studio Code (this project does not automatically install vscode!)
