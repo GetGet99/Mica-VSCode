@@ -12,6 +12,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <ApplicationDefinition Remove="App.xaml" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="PInvoke.User32" Version="0.7.104" />
 	</ItemGroup>
 
