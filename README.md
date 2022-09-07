@@ -5,9 +5,10 @@ A project that puts VSCode on Mica
 Disclaimer: ALPHA! This project is still unstable!
 
 ## How to install
-1. Download Visual Studio Code if you haven't already (this project does not automatically install VSCode)
-2. Extensions [Vibrancy](https://marketplace.visualstudio.com/items?itemName=eyhn.vscode-vibrancy) and [Fix VSCode Checksums](https://marketplace.visualstudio.com/items?itemName=lehni.vscode-fix-checksums))
-3. Run the following commands after you open (You need to do these after you open for the first time)
+1. Download and Install [Windows App SDK 1.0.3](https://aka.ms/windowsappsdk/1.0/1.0.3/windowsappruntimeinstall-1.0.3-x64.exe)
+2. Download and Install Visual Studio Code if you haven't already (this project does not automatically install VSCode)
+3. Extensions [Vibrancy](https://marketplace.visualstudio.com/items?itemName=eyhn.vscode-vibrancy) and [Fix VSCode Checksums](https://marketplace.visualstudio.com/items?itemName=lehni.vscode-fix-checksums))
+4. Run the following commands after you open (You need to do these after you open for the first time)
 ```
 Ctrl + Shift + P then 'Reload Vibrancy'
 Ctrl + Shift + P then 'Fix Checksums: Apply'
