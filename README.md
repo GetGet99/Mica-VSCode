@@ -4,6 +4,9 @@ A project that puts VSCode on Mica
 
 Disclaimer: ALPHA! This project is still unstable!
 
+## Limitations of Overlay Title Bar
+You cannot click on the menu bar. To use any of the menu bar item, please use Alt + [Initials] (Alt + F = File, for example)
+
 ## How to install
 1. Download and Install [Windows App SDK 1.0.3](https://aka.ms/windowsappsdk/1.0/1.0.3/windowsappruntimeinstall-1.0.3-x64.exe)
 2. Download and Install Visual Studio Code if you haven't already (this project does not automatically install VSCode)
