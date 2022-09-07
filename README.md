@@ -13,7 +13,7 @@ You cannot click on the menu bar. To use any of the menu bar item, please use Al
 3. Extensions [Vibrancy](https://marketplace.visualstudio.com/items?itemName=illixion.vscode-vibrancy-continued) and [Fix VSCode Checksums](https://marketplace.visualstudio.com/items?itemName=lehni.vscode-fix-checksums))
 4. Run the following commands after you open (You need to do these after you open for the first time)
 ```
-Ctrl + Shift + P then 'Reload Vibrancy'
+Ctrl + Shift + P then 'Enable Vibrancy'
 Ctrl + Shift + P then 'Fix Checksums: Apply'
 ```
 5. (Optional) [Add Custom CSS](#-add-custom-css) (see the section below)
