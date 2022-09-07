@@ -1,28 +1,33 @@
 # Mica VSCode (ALPHA)
 
-A project that puts VSCode on Mica.
+A project that puts VSCode on Mica
 
-Disclaimer: ALPHA! This is still unstable!
+Disclaimer: ALPHA! This project is still unstable!
 
-## Requirements
-1. Visual Studio Code (this project does not automatically install vscode!)
-2. Run following commands after you open (2 extensions should be automatically installed: [Vibrancy](https://marketplace.visualstudio.com/items?itemName=eyhn.vscode-vibrancy) and [Fix VSCode Checksums](https://marketplace.visualstudio.com/items?itemName=lehni.vscode-fix-checksums))
-3. You need to do these after you open for the first time
+## How to install
+1. Download Visual Studio Code if you haven't already (this project does not automatically install VSCode)
+2. Extensions [Vibrancy](https://marketplace.visualstudio.com/items?itemName=eyhn.vscode-vibrancy) and [Fix VSCode Checksums](https://marketplace.visualstudio.com/items?itemName=lehni.vscode-fix-checksums))
+3. Run the following commands after you open (You need to do these after you open for the first time)
 ```
 Ctrl + Shift + P then 'Reload Vibrancy'
 Ctrl + Shift + P then 'Fix Checksums: Apply'
 ```
-4. (Optional) [Add Custom CSS](#-add-custom-css) (see section below)
-5. Close and reopen Mica VSCode if you haven't already
+5. (Optional) [Add Custom CSS](#-add-custom-css) (see the section below)
+6. Close and reopen Mica VSCode if you haven't already
 
 ## Add Custom CSS
 Optional for better effect
 
 1. Install Extension [Custom CSS and JS Loader](https://marketplace.visualstudio.com/items?itemName=be5invis.vscode-custom-css)
-2. Create a css file somewhere in your computer
+2. Create a CSS file somewhere on your computer
 ```css
 html:lang(en) {
     background: transparent !important;
+}
+.codicon-chrome-minimize:before,
+.codicon-chrome-maximize:before,
+.codicon-chrome-close:before {
+    content: none !important;
 }
 ```
 3. `Ctrl + Shift P` then `Preferences: Open Settings (JSON)`
