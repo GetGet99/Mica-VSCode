@@ -10,7 +10,7 @@ You cannot click on the menu bar. To use any of the menu bar item, please use Al
 ## How to install
 1. Download and Install [Windows App SDK 1.0.3](https://aka.ms/windowsappsdk/1.0/1.0.3/windowsappruntimeinstall-1.0.3-x64.exe)
 2. Download and Install Visual Studio Code if you haven't already (this project does not automatically install VSCode)
-3. Extensions [Vibrancy](https://marketplace.visualstudio.com/items?itemName=eyhn.vscode-vibrancy) and [Fix VSCode Checksums](https://marketplace.visualstudio.com/items?itemName=lehni.vscode-fix-checksums))
+3. Extensions [Vibrancy](https://marketplace.visualstudio.com/items?itemName=illixion.vscode-vibrancy-continued) and [Fix VSCode Checksums](https://marketplace.visualstudio.com/items?itemName=lehni.vscode-fix-checksums))
 4. Run the following commands after you open (You need to do these after you open for the first time)
 ```
 Ctrl + Shift + P then 'Reload Vibrancy'
