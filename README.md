@@ -16,6 +16,7 @@ You cannot click on the menu bar. To use any of the menu bar item, please use Al
 Ctrl + Shift + P then 'Enable Vibrancy'
 Ctrl + Shift + P then 'Fix Checksums: Apply'
 ```
+Please Note: If you update Visual Studio Code, you must reload vibrany `Ctrl + Shift + P then 'Reload Vibrancy'`
 5. (Optional) [Add Custom CSS](#-add-custom-css) (see the section below)
 6. Close and reopen Mica VSCode if you haven't already
 
