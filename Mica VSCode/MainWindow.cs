@@ -54,7 +54,7 @@ namespace MicaVSCode
         public MainWindow()
         {
 #if WINDOWS10_0_17763_0_OR_GREATER
-            Settings.BackdropType = MicaWindow.BackdropType.Mica;
+            Settings.BackdropType = MicaWindow.BackdropType.Tabbed;
 #endif
             //var win = new Form
             //{
